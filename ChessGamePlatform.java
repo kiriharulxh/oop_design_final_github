@@ -381,7 +381,7 @@ class WuZi extends ChessGame {
 
 class GoGame extends ChessGame {
     private boolean passOnce = false;
-    private String passPlayer;
+    private String passPlayer = "";
 
     GoGame(int cbl) {
         super(cbl, 'B'); // 黑棋先行
@@ -653,6 +653,7 @@ abstract class PlayState implements TerminalState {
                     goAndCheck(x, y, terminal, curPlayer);
                         
                 } catch (Exception e) {
+                    System.out.println(e);
                     System.out.println("输入有误!");
                 }
                 break;
