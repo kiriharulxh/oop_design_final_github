@@ -1528,6 +1528,7 @@ class UserTerminal {
 
         saveUserInfo();
         saveRecord();
+        this.gameRecord = new Vector<String>();
     }
 
     public void saveRecord() {
